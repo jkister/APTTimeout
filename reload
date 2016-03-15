@@ -1,0 +1,44 @@
+#!/bin/sh
+
+rm obj/APTTimeout.mm.*.o
+rm obj/APTTimeout.bundle/APTTimeout
+
+make ARCHS="armv7 arm64" SDKVERSION=8.1
+exval=$?
+if [ $exval -gt 0 ] ; then
+    echo "** RELOAD STOP **"
+    exit $exval
+fi
+
+if [ "$1" = "copy" ] || [ "$1" = "copyonly" ]; then
+    echo " * COPY s4!"
+
+    RDIR=/home/users/j/jkister/repo/APTTimeout
+    scp obj/APTTimeout.bundle/APTTimeout s4:$RDIR/Library/PreferenceBundles/APTTimeout.bundle/
+    scp Resources/APTTimeout.plist       s4:$RDIR/Library/PreferenceBundles/APTTimeout.bundle/
+    scp Resources/Info.plist             s4:$RDIR/Library/PreferenceBundles/APTTimeout.bundle/
+    scp Resources/Author.plist           s4:$RDIR/Library/PreferenceBundles/APTTimeout.bundle/
+    scp entry.plist s4:$RDIR/Library/PreferenceLoader/Preferences/net.kister.APTTimeout.plist
+
+    if [ "$1" = "copyonly" ] ; then
+        echo " * COPY s4 ONLY"
+        exit
+    fi
+fi
+
+echo " * INSTALL on local device"
+cp obj/APTTimeout.bundle/APTTimeout /Library/PreferenceBundles/APTTimeout.bundle/
+cp Resources/APTTimeout.plist       /Library/PreferenceBundles/APTTimeout.bundle/
+cp Resources/Info.plist             /Library/PreferenceBundles/APTTimeout.bundle/
+cp Resources/Author.plist           /Library/PreferenceBundles/APTTimeout.bundle/
+cp entry.plist /Library/PreferenceLoader/Preferences/net.kister.APTTimeout.plist
+
+killall Preferences
+killall cfprefsd
+
+sleep 2;
+
+open com.apple.Preferences
+
+tail -f /var/log/syslog
+

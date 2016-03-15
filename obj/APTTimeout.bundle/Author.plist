@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>id</key>
+    <string>net.kister.APTTimeout</string>
+
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>            <string>PSGroupCell</string>
+            <key>footerAlignment</key> <integer>1</integer>
+            <key>footerText</key>      <string>iOS and Objective-C Superstar</string>
+        </dict>
+        <dict>
+            <key>cell</key>     <string>PSGiantIconCell</string>
+            <key>icon</key>     <string>img/jkister.png</string>
+            <key>alignment</key><integer>1</integer>
+            <key>action</key>   <string></string>
+        </dict>
+
+        <dict>
+            <key>cell</key>            <string>PSGroupCell</string>
+        </dict>
+
+        <dict>
+            <key>cell</key>      <string>PSButtonCell</string>
+            <key>label</key>     <string>/r/APTTimeout</string>
+            <key>action</key>    <string>reddit</string>
+            <key>alignment</key> <string>center</string>
+            <key>icon</key>      <string>img/Reddit.png</string>
+        </dict>
+
+        <dict>
+            <key>cell</key>  <string>PSGroupCell</string>
+        </dict>
+
+        <dict>
+            <key>cell</key>      <string>PSButtonCell</string>
+            <key>label</key>     <string>@jkister</string>
+            <key>action</key>    <string>twitter</string>
+            <key>alignment</key> <string>center</string>
+            <key>icon</key>      <string>img/Twitter.png</string>
+        </dict>
+
+        <dict>
+            <key>cell</key>      <string>PSButtonCell</string>
+            <key>label</key>     <string>jkister's beta repo</string>
+            <key>action</key>    <string>repo</string>
+            <key>alignment</key> <string>center</string>
+            <key>icon</key>      <string>img/repo.png</string>
+        </dict>
+
+        <dict>
+            <key>cell</key>  <string>PSGroupCell</string>
+        </dict>
+
+        <dict>
+            <key>cell</key>      <string>PSButtonCell</string>
+            <key>label</key>     <string>Love via Bitcoin</string>
+            <key>action</key>    <string>bitcoin</string>
+            <key>alignment</key> <string>center</string>
+            <key>icon</key>      <string>img/Bitcoin.png</string>
+        </dict>
+        <dict>
+            <key>cell</key>      <string>PSButtonCell</string>
+            <key>label</key>     <string>Love via Paypal</string>
+            <key>action</key>    <string>paypal</string>
+            <key>alignment</key> <string>center</string>
+            <key>icon</key>      <string>img/Paypal.png</string>
+        </dict>
+
+        <dict>
+          <key>cell</key>        <string>PSGroupCell</string>
+          <key>footerAlignment</key> <integer>1</integer>
+          <key>footerText</key>
+          <string>APTTimeout © 2016 Jeremy Kister.
+Released under the Artistic License 2.0.</string>
+        </dict>
+
+    </array>
+
+    <key>title</key>
+    <string>APTTimeout</string>
+  </dict>
+</plist>

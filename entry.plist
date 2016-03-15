@@ -1,0 +1,10 @@
+{
+    entry = {
+        bundle = APTTimeout;
+        cell = PSLinkCell;
+        detail = APTTimeoutListController;
+        icon = APTTimeout.png;
+        isController = 1;
+        label = APTTimeout;
+    };
+}

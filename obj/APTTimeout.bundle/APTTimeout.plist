@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>id</key>
+    <string>net.kister.APTTimeout</string>
+
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>      <string>PSGroupCell</string>
+            <key>label</key>     <string>APT Timeout Settings</string>
+            <key>alignment</key> <integer>1</integer>
+            <key>footerText</key><string>NB: Cydia (via APT) requests 5 files from each repo, which may cause a 5x delay from the above values.</string>
+            <key>footerAlignment</key> <integer>1</integer>
+        </dict>
+
+        <dict>
+            <key>cell</key>     <string>PSLinkListCell</string>
+            <key>detail</key>   <string>PSListItemsController</string>
+            <key>default</key>  <integer>5</integer>
+            <key>defaults</key> <string>net.kister.APTTimeout</string>
+            <key>label</key>    <string>HTTP Timeout</string>
+            <key>key</key>      <string>http</string>
+            <key>validTitles</key>
+            <array>
+                <string>1</string>
+                <string>2</string>
+                <string>3</string>
+                <string>4</string>
+                <string>5</string>
+                <string>10</string>
+                <string>15</string>
+                <string>20</string>
+                <string>25</string>
+                <string>30</string>
+            </array>
+            <key>validValues</key>
+            <array>
+                <integer>1</integer>
+                <integer>2</integer>
+                <integer>3</integer>
+                <integer>4</integer>
+                <integer>5</integer>
+                <integer>10</integer>
+                <integer>15</integer>
+                <integer>20</integer>
+                <integer>25</integer>
+                <integer>30</integer>
+            </array>
+        </dict>
+
+        <dict>
+            <key>cell</key>     <string>PSLinkListCell</string>
+            <key>detail</key>   <string>PSListItemsController</string>
+            <key>default</key>  <integer>5</integer>
+            <key>defaults</key> <string>net.kister.APTTimeout</string>
+            <key>label</key>    <string>FTP Timeout</string>
+            <key>key</key>      <string>ftp</string>
+            <key>validTitles</key>
+            <array>
+                <string>1</string>
+                <string>2</string>
+                <string>3</string>
+                <string>4</string>
+                <string>5</string>
+                <string>10</string>
+                <string>15</string>
+                <string>20</string>
+                <string>25</string>
+                <string>30</string>
+            </array>
+            <key>validValues</key>
+            <array>
+                <integer>1</integer>
+                <integer>2</integer>
+                <integer>3</integer>
+                <integer>4</integer>
+                <integer>5</integer>
+                <integer>10</integer>
+                <integer>15</integer>
+                <integer>20</integer>
+                <integer>25</integer>
+                <integer>30</integer>
+            </array>
+        </dict>
+
+        <dict>
+            <key>cell</key>  <string>PSGroupCell</string>
+        </dict>
+
+        <dict>
+            <key>cell</key>      <string>PSButtonCell</string>
+            <key>label</key>     <string>[APPLY SETTINGS]</string>
+            <key>action</key>    <string>apply</string>
+            <key>alignment</key> <string>center</string>
+        </dict>
+
+        <dict>
+            <key>cell</key>  <string>PSGroupCell</string>
+        </dict>
+        <dict>
+            <key>cell</key>      <string>PSLinkCell</string>
+            <key>label</key>     <string>Author</string>
+            <key>icon</key>      <string>img/jkister.png</string>
+            <key>detail</key>    <string>AuthorListController</string>
+        </dict>
+
+        <dict>
+          <key>cell</key>        <string>PSGroupCell</string>
+          <key>footerAlignment</key> <integer>1</integer>
+          <key>footerText</key>
+          <string>APTTimeout © 2016 Jeremy Kister.
+Released under the Artistic License 2.0.</string>
+        </dict>
+
+    </array>
+
+    <key>title</key>
+    <string>APTTimeout</string>
+  </dict>
+</plist>
